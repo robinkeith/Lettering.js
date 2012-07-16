@@ -13,9 +13,10 @@
 (function($){
 	function injector(t, splitter, klass, after) {
 		var a = t.text().split(splitter), inject = '';
+		var el="div"
 		if (a.length) {
 			$(a).each(function(i, item) {
-				inject += '<span class="'+klass+(i+1)+'">'+item+'</span>'+after;
+				inject += '<' + el +' class="'+klass+(i+1)+'">'+item+'</' + el +'>'+after;
 			});	
 			t.empty().append(inject);
 		}
