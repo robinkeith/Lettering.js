@@ -13,7 +13,7 @@
 (function($){
 	function injector(t, splitter, klass, after) {
 		var a = t.text().split(splitter), inject = '';
-		var el="div"
+		var el="span";/*"div";*/
 		if (a.length) {
 			$(a).each(function(i, item) {
 				inject += '<' + el +' class="'+klass+(i+1)+'">'+item+'</' + el +'>'+after;
